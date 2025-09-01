@@ -1,0 +1,12 @@
+I would like to follow a hybrid approach i.e to use both Relational and Non-Relational databases for different parts of the platform. 
+
+My analysis on three requirements:-
+
+-> Requirement A - Ticket Sales :- This part of the system requires transactions to take place i.e if any error/bug occurs in between the transaction, it has to be revoked back to its previous state. If everything works fine(all the desired operations being performed as planned, no bugs/issues in between the transaction) then we can commit and end the transaction.
+
+It is better to keep this module in Relational database. I feel so because:-
+	Every Transaction needs to be atomic , also it has to follow all ACID properties. Relational databases have a better transaction support compared to non relational databases. We can introduce @Transactional on functions performing ticket-sales. 
+	Since Ticket-Sales seems to have a definite schema structure over a period of longer duration, it is better to have a pre-defined schema (Table).
+	In terms of CAP theorem, the availability and consistency should work together in this case, which suggests that a relational database can be a better option.
+
+-> Requirement B - News Feed :- 
