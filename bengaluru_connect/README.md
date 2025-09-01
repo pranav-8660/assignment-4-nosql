@@ -1,21 +1,23 @@
-I would like to follow a hybrid approach i.e to use both Relational and Non-Relational databases for different parts of the platform. 
+The Vision: "Bengaluru Connect" aims to be the ultimate platform for everything happening in the city. It will have two main features:
+Event Ticketing: Users can book tickets for a limited number of seats at exclusive events, from a pottery workshop in Koramangala with 20 seats to a stand-up comedy show in Indiranagar with 100 seats.
+Local News Feed: A highly active, real-time feed where users can post news, photos, and updates about their neighbourhood (e.g., "Road closure near MG Road," "New cafe opening in Jayanagar").
+The Challenge:
+As the architect, you must decide on the foundational database strategy for the entire platform. Write a brief, clear recommendation.
 
-My analysis on three requirements:-
+Here are the critical business requirements you must consider:
 
--> Requirement A - Ticket Sales :- This part of the system requires transactions to take place i.e if any error/bug occurs in between the transaction, it has to be revoked back to its previous state. If everything works fine(all the desired operations being performed as planned, no bugs/issues in between the transaction) then we can commit and end the transaction.
+Requirement A (Ticket Sales): We absolutely cannot sell the same seat twice for any event. A transaction must be 100% reliable. If a user's booking fails halfway through, the seat must immediately be available for others.
+Requirement B (News Feed): The news feed must be extremely fast and always available. We anticipate millions of users reading and posting concurrently. It's okay if a new post takes a few seconds to appear for everyone across the city, but the feed can never go down.
+Requirement C (User Profiles): User profiles will be flexible. Some users might add a bio, others might link their social media, and others might have a portfolio of their photos posted on the feed. The profile structure will evolve over time.
+Your Assignment: Write a recommendation memo (1-2 pages) that addresses the following:
 
-It is better to keep this module in Relational database. I feel so because:-
-	Every Transaction needs to be atomic , also it has to follow all ACID properties. Relational databases have a better transaction support compared to non relational databases. We can introduce @Transactional on functions performing ticket-sales. 
-	Since Ticket-Sales seems to have a definite schema structure over a period of longer duration, it is better to have a pre-defined schema (Table). For which relational databases can be a better option.
-	In terms of CAP theorem, the availability and consistency should work together in this case, which suggests that a relational database can be a better option.
+Your Final Decision: State clearly which database type you recommend:
+A Relational (SQL) Database for the entire platform.
+A NoSQL Database for the entire platform.
+A Hybrid Approach (using both for different parts of the platform).
+Justification & Trade-offs: This is the most important part. Justify why you made your choice. Specifically explain briefly how your chosen approach will handle all three requirements (A, B, and C).
 
--> Requirement B - News Feed :- As mentioned, this module requires high availability(atleast the feed, where subscribed posts need to be shown). Since the news feed has a huge and enormous amount of data which grows every moment, it requires both vertical and horizontal scaling. Vertical scaling if new posts/news come up every moment(the database needs to scale up vertically in this case). Horizontal scaling if the same post/news-instance grows(means new updates come on the same/previous instance).A feed can contain n number of posts. Every post can contain n number of comments.Every such comment can have n number of replies. We can observe that it doesn't have a schema-structure. Also we can observe that it has a hierarchial structure/tree based structure. 
+The Biggest Risk: Identify the single biggest technical risk of the approach you have chosen and briefly explain how you plan to manage it.
 
-It is better to keep this module in Non-Relational database. I feel so because:-
-	Since the module requires both vertical and horizontal scaling, NoSql databases are better for horizontal scaling.For vertical scaling we can add more resources like more RAM/more pods to handle vertical scaling.
-	Since the News-feed has multiple posts, where each post has n number of attributes associated with it, it clearly has a tree based structure. Which i feel NoSql databases are the ultimate choice.
-	Also that the system keeps growing with past history attached with present news, it may be necessary to partition the database document in future. Hence its a better choice to opt for NoSql database.
-	Considering the CAP theorem , the availability and partition tolerance should work together, which suggests that a NoSql database can be a better option.
-
--> Requirement C - User Profiles:-
-
+Note:
+Your goal is not to find the one "right" answer, but to demonstrate that you can think through a complex problem, weigh the pros and cons, and defend your decision.
