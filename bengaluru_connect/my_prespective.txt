@@ -17,5 +17,14 @@ It is better to keep this module in Non-Relational database. I feel so because:-
 	Also that the system keeps growing with past history attached with present news, it may be necessary to partition the database document in future. Hence its a better choice to opt for NoSql database.
 	Considering the CAP theorem , the availability and partition tolerance should work together, which suggests that a NoSql database can be a better option.
 
--> Requirement C - User Profiles:-
+-> Requirement C - User Profiles:- As mentioned, this module requires more flexibility. Flexibility for users to add/delete their bio, link/unlink other social media accounts.Link portfolios and add/delete pictures. The structure of the portfolio will evolve overtime. Since this module requires high partition tolerance (for re-structuring the feed and profile) and high consistency(the profile needs to be consistent with changing/updating pictures and other social media links).
 
+It is better to keep this module in Non-Relational database. I feel so because:-
+	Since the module requires high re-structuring of database-document, it should be schema-less to facilitate this. A NoSql database is the ultimate choice for schema-less and continuously changing document/structure.
+	Also the partition tolerance comes into picture when a user wants to restructure their profile/feed seperately. In this case a nosql database is a better option.
+	In terms of CAP theorem, the consistenxy and partition tolerance should work together in this case, which suggests that a NoSql database can be a better option.
+
+
+According to me, the Biggest risk in the entire Platform is:-
+	1)Managing the transactions during the Ticket Sales(Requirement-A). This should be synchronous and locked(locking will also be risky, what if two users click the seat selection option at the same instance? Which user should i favour for the locking system) at the same time. Even the optimistic locking fails here(checking the version variable, where previous version is same for both the users).
+	Managing the risk-> When two users are booking the same seat at the same time-stamp(Here two locks try to come-up simultaneously. We can tackle this race condition by using some database constraints. Like allocating the lock to the user based on his user-id, type of user. Message queus can be used for better processing of events. Lets say one user gets rejected (due to some custom set database constraint) , even this rejection of seat shall be informed as quickly as possible so that he can select a different seat.
