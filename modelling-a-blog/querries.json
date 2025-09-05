@@ -1,0 +1,45 @@
+//1)Fetch all articles for a given user
+
+db.modelling_blog.find(
+  { "user.name": "Pranav Venkatesh" },
+  { "user.articles": 1, _id: 0 }
+)
+
+//2)Fetch users who write articles for a given category
+
+db.modelling_blog.find(
+  { "user.articles.categories": "devotion" },
+  { "user.name": 1, "user.email": 1, _id: 0 }
+)
+
+//3)Fetch users who write articles for a given Tag.
+
+db.modelling_blog.find(
+  { "user.articles.tags": "AI" },
+  { "user.name": 1, "user.email": 1, _id: 0 }
+)
+
+//4)Fetch all the comments for a particular article.
+
+db.modelling_blog.find(
+  { "user.articles.title": "ramayana_dharshini" },
+  { "user.articles.$.comments": 1, _id: 0 }
+)
+
+//5)Write a query to fetch all articles for the user. Use projection to fetch only the title of each article and not the complete document.
+
+db.modelling_blog.find(
+  { "user.name": "Sneha Kulkarni" },
+  { "user.articles.title": 1, _id: 0 }
+)
+
+//6)Write a query to deduct 50 credits from a particular user
+
+db.modelling_blog.find(
+  { "user.name": "Rahul Mehta" },
+  { "user.credits": 1, _id: 0 }
+)
+db.modelling_blog.updateOne(
+  { "user.name": "Rahul Mehta" },
+  { $inc: { "user.credits": -50 } }
+)
