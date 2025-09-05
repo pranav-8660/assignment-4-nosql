@@ -1,0 +1,167 @@
+[
+  {
+    "name": "Pranav Venkatesh",
+    "email": "pranavcse2003@gmail.com",
+    "credits": 300,
+    "articles": [
+      {
+        "title": "ramayana_dharshini",
+        "date": { "$date": "2025-07-01T11:00:00Z" },
+        "text": "A sanskrit to kannada translated version",
+        "url": "https://articleexpo.in/ramayana_dharshini",
+        "categories": ["devotion", "action"],
+        "tags": ["sanjivini", "shiva dhanas"],
+        "comments": [
+          { "date": { "$date": "2025-08-01T11:13:00Z" }, "text": "i was able to glance through the history of ramayana" },
+          { "date": { "$date": "2025-08-02T14:45:00Z" }, "text": "beautiful translation, very helpful!" },
+          { "date": { "$date": "2025-08-03T10:30:00Z" }, "text": "would love to read more like this" }
+        ]
+      },
+      {
+        "title": "merchant_of_venice",
+        "date": { "$date": "2024-04-01T11:00:00Z" },
+        "text": "A story of how a loan repay was waived off",
+        "url": "https://articleexpo.in/merchant_of_venice",
+        "categories": ["drama", "action", "romance"],
+        "tags": ["shakespeare", "classic"],
+        "comments": [
+          { "date": { "$date": "2025-07-01T11:00:00Z" }, "text": "i was able to recall action and had amusement" },
+          { "date": { "$date": "2025-07-02T09:30:00Z" }, "text": "reminded me of Shakespeare days in college" },
+          { "date": { "$date": "2025-07-03T18:20:00Z" }, "text": "classic, timeless story" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ananya Rao",
+    "email": "ananya.rao@example.com",
+    "credits": 450,
+    "articles": [
+      {
+        "title": "the_art_of_yoga",
+        "date": { "$date": "2025-05-10T07:30:00Z" },
+        "text": "An introduction to yoga practices and meditation benefits",
+        "url": "https://articleexpo.in/the_art_of_yoga",
+        "categories": ["health", "lifestyle"],
+        "tags": ["yoga", "mindfulness"],
+        "comments": [
+          { "date": { "$date": "2025-05-15T08:00:00Z" }, "text": "helped me start yoga routine daily" },
+          { "date": { "$date": "2025-05-16T09:10:00Z" }, "text": "great for beginners" },
+          { "date": { "$date": "2025-05-17T07:45:00Z" }, "text": "motivated me to try meditation" }
+        ]
+      },
+      {
+        "title": "ayurveda_basics",
+        "date": { "$date": "2025-02-20T10:00:00Z" },
+        "text": "Understanding ayurveda and traditional healing methods",
+        "url": "https://articleexpo.in/ayurveda_basics",
+        "categories": ["health", "science"],
+        "tags": ["ayurveda", "healing"],
+        "comments": [
+          { "date": { "$date": "2025-03-01T14:00:00Z" }, "text": "nicely explained with simple examples" },
+          { "date": { "$date": "2025-03-02T12:30:00Z" }, "text": "very informative" },
+          { "date": { "$date": "2025-03-03T11:15:00Z" }, "text": "I shared this with my family" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rahul Mehta",
+    "email": "rahul.mehta@example.com",
+    "credits": 220,
+    "articles": [
+      {
+        "title": "cricket_worldcup_memories",
+        "date": { "$date": "2024-11-15T09:00:00Z" },
+        "text": "Revisiting India’s glorious cricket world cup matches",
+        "url": "https://articleexpo.in/cricket_worldcup_memories",
+        "categories": ["sports", "history"],
+        "tags": ["cricket", "worldcup"],
+        "comments": [
+          { "date": { "$date": "2024-11-20T13:00:00Z" }, "text": "brought back so many memories" },
+          { "date": { "$date": "2024-11-21T10:00:00Z" }, "text": "nostalgic!" },
+          { "date": { "$date": "2024-11-22T18:30:00Z" }, "text": "well written article" }
+        ]
+      },
+      {
+        "title": "football_legends",
+        "date": { "$date": "2025-01-05T16:00:00Z" },
+        "text": "Stories of football legends across generations",
+        "url": "https://articleexpo.in/football_legends",
+        "categories": ["sports"],
+        "tags": ["football", "legends"],
+        "comments": [
+          { "date": { "$date": "2025-01-10T17:00:00Z" }, "text": "inspiring collection of stories" },
+          { "date": { "$date": "2025-01-11T14:15:00Z" }, "text": "great list of legends" },
+          { "date": { "$date": "2025-01-12T09:00:00Z" }, "text": "waiting for part 2" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sneha Kapoor",
+    "email": "sneha.kapoor@example.com",
+    "credits": 370,
+    "articles": [
+      {
+        "title": "startup_journey",
+        "date": { "$date": "2025-03-12T12:00:00Z" },
+        "text": "Lessons learned while building a tech startup",
+        "url": "https://articleexpo.in/startup_journey",
+        "categories": ["business", "technology"],
+        "tags": ["entrepreneurship", "startup"],
+        "comments": [
+          { "date": { "$date": "2025-03-18T18:00:00Z" }, "text": "very practical tips for founders" },
+          { "date": { "$date": "2025-03-19T08:30:00Z" }, "text": "loved the personal touch" },
+          { "date": { "$date": "2025-03-20T11:45:00Z" }, "text": "useful for my startup project" }
+        ]
+      },
+      {
+        "title": "women_in_tech",
+        "date": { "$date": "2025-04-22T10:00:00Z" },
+        "text": "Highlighting achievements of women in technology",
+        "url": "https://articleexpo.in/women_in_tech",
+        "categories": ["technology", "society"],
+        "tags": ["diversity", "inclusion"],
+        "comments": [
+          { "date": { "$date": "2025-04-25T15:00:00Z" }, "text": "very inspiring stories" },
+          { "date": { "$date": "2025-04-26T13:15:00Z" }, "text": "much needed article" },
+          { "date": { "$date": "2025-04-27T09:45:00Z" }, "text": "thank you for writing this" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vikram Iyer",
+    "email": "vikram.iyer@example.com",
+    "credits": 180,
+    "articles": [
+      {
+        "title": "machine_learning_intro",
+        "date": { "$date": "2025-06-01T11:00:00Z" },
+        "text": "A beginner-friendly introduction to machine learning",
+        "url": "https://articleexpo.in/machine_learning_intro",
+        "categories": ["technology", "education"],
+        "tags": ["AI", "ML"],
+        "comments": [
+          { "date": { "$date": "2025-06-05T09:30:00Z" }, "text": "great for students new to ML" },
+          { "date": { "$date": "2025-06-06T10:00:00Z" }, "text": "simple and clear examples" },
+          { "date": { "$date": "2025-06-07T14:20:00Z" }, "text": "waiting for deep learning part" }
+        ]
+      },
+      {
+        "title": "climate_change_effects",
+        "date": { "$date": "2024-12-10T08:00:00Z" },
+        "text": "Analyzing the effects of climate change globally",
+        "url": "https://articleexpo.in/climate_change_effects",
+        "categories": ["environment", "science"],
+        "tags": ["climate", "sustainability"],
+        "comments": [
+          { "date": { "$date": "2024-12-15T12:45:00Z" }, "text": "an eye opener on environmental issues" },
+          { "date": { "$date": "2024-12-16T10:30:00Z" }, "text": "very detailed analysis" },
+          { "date": { "$date": "2024-12-17T16:00:00Z" }, "text": "important for awareness" }
+        ]
+      }
+    ]
+  }
+]
